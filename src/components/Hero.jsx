@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FadeIn from "./FadeIn";
-import { STATS, TECH_STACK } from "../data/skills";
-import { TECH_STACK as TECH } from "../data/skills";
+import { TECH_STACK } from "../data/skills";
+import { STATS } from "../data/experience";
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
