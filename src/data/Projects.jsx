@@ -1,0 +1,38 @@
+export const PROJECTS = [
+  {
+    title: "NexCart",
+    tag: "Fullstack",
+    color: "#00D4AA",
+    desc: "A high-performance e-commerce platform built with Next.js 14, Stripe, and PostgreSQL. Handles 50k+ daily transactions with 99.9% uptime.",
+    tech: ["Next.js", "Stripe", "PostgreSQL", "Redis", "AWS"],
+    github: "https://github.com/",
+    live: "https://example.com",
+  },
+  {
+    title: "SyncDesk",
+    tag: "SaaS",
+    color: "#7C6AF7",
+    desc: "Real-time project management tool with live collaboration, custom workflows, and AI-powered task suggestions.",
+    tech: ["React", "Node.js", "Socket.io", "MongoDB", "OpenAI"],
+    github: "https://github.com/",
+    live: "https://example.com",
+  },
+  {
+    title: "DataPulse",
+    tag: "Analytics",
+    color: "#F97316",
+    desc: "Analytics dashboard for SaaS businesses — tracks MRR, churn, and user behavior with drill-down reports and export.",
+    tech: ["Vue.js", "Python", "FastAPI", "ClickHouse", "GCP"],
+    github: "https://github.com/",
+    live: "https://example.com",
+  },
+  {
+    title: "AuthForge",
+    tag: "Open Source",
+    color: "#EC4899",
+    desc: "Drop-in authentication library supporting OAuth2, SAML, magic links, and biometric login. 2k+ GitHub stars.",
+    tech: ["TypeScript", "JWT", "OAuth2", "SAML", "Docker"],
+    github: "https://github.com/",
+    live: "https://example.com",
+  },
+];
