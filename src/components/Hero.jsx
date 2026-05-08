@@ -1,13 +1,12 @@
 import { useState } from "react";
 import FadeIn from "./FadeIn";
-import { TECH_STACK } from "../data/skills";
-import { STATS } from "../data/experience";
+import myPhoto from "../assets/photo.jpg";
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("alex@devportfolio.io");
+    navigator.clipboard.writeText("lochaniketipearachchi@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -41,7 +40,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Main grid: text + avatar */}
+      {/* Main grid: text + photo */}
       <div
         className="hero-grid"
         style={{
@@ -93,10 +92,10 @@ export default function Hero() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Alex Chen
+                Miyuranga
               </span>
               .<br />
-              Fullstack Engineer.
+              Web Developer , Fullstack Developer.
             </h1>
           </FadeIn>
 
@@ -111,8 +110,7 @@ export default function Hero() {
               }}
             >
               I build scalable, user-obsessed web products — from pixel-perfect
-              frontends to battle-hardened backend systems. 6 years shipping
-              code that matters.
+              frontends to battle-hardened backend systems.
             </p>
           </FadeIn>
 
@@ -162,67 +160,45 @@ export default function Hero() {
                 (e.currentTarget.style.background = "rgba(255,255,255,0.05)")
               }
             >
-              {copied ? "✓ Copied!" : "📋 alex@devportfolio.io"}
+              {copied ? "✓ Copied!" : "📋 lochaniketipearachchi@gmail.com"}
             </button>
-          </FadeIn>
-
-          {/* Stats row */}
-          <FadeIn
-            delay={400}
-            style={{ display: "flex", gap: 32, marginTop: 44 }}
-          >
-            {[
-              ["6+", "Years exp."],
-              ["40+", "Projects"],
-              ["20+", "Clients"],
-              ["2k+", "GitHub ★"],
-            ].map(([num, label]) => (
-              <div key={label}>
-                <div
-                  style={{
-                    fontFamily: "'Syne', sans-serif",
-                    fontSize: 26,
-                    fontWeight: 800,
-                    background: "linear-gradient(90deg,#00D4AA,#7C6AF7)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  {num}
-                </div>
-                <div
-                  style={{
-                    fontSize: 12,
-                    color: "rgba(232,232,240,0.4)",
-                    marginTop: 2,
-                  }}
-                >
-                  {label}
-                </div>
-              </div>
-            ))}
           </FadeIn>
         </div>
 
-        {/* Right: avatar */}
+        {/* Right: photo */}
         <FadeIn delay={200} style={{ position: "relative" }} className="hero-avatar">
           <div
             className="hero-avatar"
             style={{
-              width: 220,
-              height: 220,
-              borderRadius: "50% 40% 60% 50% / 50% 60% 40% 50%",
-              background:
-                "linear-gradient(135deg,rgba(0,212,170,0.15),rgba(124,106,247,0.2))",
-              border: "1px solid rgba(124,106,247,0.3)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: 80,
               position: "relative",
+              width: 240,
+              height: 240,
             }}
           >
-            👨‍💻
+            {/* Gradient ring */}
+            <div
+              style={{
+                position: "absolute",
+                inset: -3,
+                borderRadius: "50% 40% 60% 50% / 50% 60% 40% 50%",
+                background: "linear-gradient(135deg,#00D4AA,#7C6AF7)",
+                zIndex: 0,
+              }}
+            />
+            {/* Your photo */}
+            <img
+              src={myPhoto}
+              alt="Miyuranga"
+              style={{
+                position: "relative",
+                zIndex: 1,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "50% 40% 60% 50% / 50% 60% 40% 50%",
+                border: "3px solid #0A0A0F",
+              }}
+            />
             {/* Online dot */}
             <div
               style={{
@@ -234,6 +210,7 @@ export default function Hero() {
                 borderRadius: "50%",
                 background: "#00D4AA",
                 border: "3px solid #0A0A0F",
+                zIndex: 2,
               }}
             />
           </div>
@@ -253,15 +230,12 @@ export default function Hero() {
         }}
       >
         {[
+          "Laravel",
+          "Springboot",
           "React",
-          "TypeScript",
-          "Node.js",
-          "PostgreSQL",
-          "Next.js",
-          "Docker",
-          "AWS",
-          "GraphQL",
-          "Redis",
+          "Supabase",
+          "Mysql",
+          "MongoDB",
           "Python",
         ].map((tech) => (
           <span

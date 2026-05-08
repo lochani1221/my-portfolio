@@ -1,25 +1,19 @@
 export const EXPERIENCE = [
   {
-    role: "Senior Fullstack Engineer",
-    company: "Horizon Labs",
-    period: "2022 — Present",
+    role: "Software Developer Intern",
+    company: "Centre for Defence Research & Development",
+    period: "2025/02— 2025/08",
     color: "#00D4AA",
-    desc: "Leading a team of 6 engineers building a B2B SaaS platform serving 200+ enterprise clients. Architected microservices migration, reducing latency by 40%.",
+    desc: "Developing and maintaining secure software solutions for internal MOD and CDRD projects, managing multiple tasks focused on performance and functionality, and collaborating with teams to deliver complete, government-grade systems.",
   },
   {
-    role: "Fullstack Developer",
-    company: "Byte & Co.",
-    period: "2020 — 2022",
+    role: "School Leaver",
+    company: "Bank of Ceylon",
+    period: "2021/07 — 2022/02",
     color: "#7C6AF7",
-    desc: "Built and shipped 12 client products across fintech, health-tech, and logistics. Core contributor to internal design system adopted across all projects.",
+    desc: "Handled account opening and online banking services while providing customer service, maintaining accurate records, and supporting overall branch functions with efficiency and professionalism.",
   },
-  {
-    role: "Junior Developer",
-    company: "Codify Studio",
-    period: "2018 — 2020",
-    color: "#7C6AF7",
-    desc: "Started as a frontend intern, grew into fullstack. Shipped React Native app with 80k downloads. Introduced automated testing that cut regression bugs by 60%.",
-  },
+  
 ];
 
 export const STATS = [

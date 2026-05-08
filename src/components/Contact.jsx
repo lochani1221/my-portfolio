@@ -5,25 +5,25 @@ const CONTACT_INFO = [
   {
     icon: "📧",
     label: "Email",
-    value: "alex@devportfolio.io",
+    value: "lochaniketipearachchi@gmail.com",
     copyable: true,
   },
   {
     icon: "🐙",
     label: "GitHub",
-    value: "github.com/alexchen",
-    href: "https://github.com/",
+    value: "github.com/lochani1221",
+    href: "https://github.com/lochani1221",
   },
   {
     icon: "💼",
     label: "LinkedIn",
-    value: "linkedin.com/in/alexchen",
-    href: "https://linkedin.com/",
+    value: "linkedin.com/in/miyuranga-ketipearachchi",
+    href: "http://www.linkedin.com/in/miyuranga-ketipearachchi",
   },
   {
     icon: "🌍",
     label: "Location",
-    value: "San Francisco, CA (Remote OK)",
+    value: "Mapalagama, Galle (Remote OK)",
   },
 ];
 
@@ -32,11 +32,26 @@ export default function Contact() {
   const [sent, setSent] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSent(true);
-    setForm({ name: "", email: "", message: "" });
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await fetch("https://formspree.io/f/mgodlddw", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      }),
+    });
+    if (response.ok) {
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+    }
+  } catch (error) {
+    console.error("Failed to send:", error);
+  }
+};
 
   const handleCopy = (value) => {
     navigator.clipboard.writeText(value);

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import FadeIn from "./FadeIn";
-import AnimBar from "./AnimBar";
-import { SKILLS } from "../data/skills";
+import { SKILLS } from "../data/skills.jsx";
 
 export default function Skills() {
   const [activeTab, setActiveTab] = useState("Frontend");
@@ -67,8 +66,7 @@ export default function Skills() {
                 activeTab === tab
                   ? "linear-gradient(135deg,#00D4AA,#7C6AF7)"
                   : "rgba(255,255,255,0.06)",
-              color:
-                activeTab === tab ? "#fff" : "rgba(232,232,240,0.6)",
+              color: activeTab === tab ? "#fff" : "rgba(232,232,240,0.6)",
             }}
           >
             {tab}
@@ -80,8 +78,8 @@ export default function Skills() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: 16,
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          gap: 12,
         }}
       >
         {SKILLS[activeTab].map((skill, i) => (
@@ -90,41 +88,35 @@ export default function Skills() {
               style={{
                 background: "rgba(255,255,255,0.03)",
                 border: "1px solid rgba(255,255,255,0.07)",
-                borderRadius: 16,
-                padding: "20px 24px",
-                transition: "border-color 0.2s",
+                borderRadius: 14,
+                padding: "18px 22px",
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                transition: "border-color 0.2s, transform 0.2s",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "rgba(124,106,247,0.35)";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)";
+                e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              {/* Skill name + percentage */}
+              {/* Colored dot */}
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  marginBottom: 14,
+                  width: 8,
+                  height: 8,
+                  borderRadius: "50%",
+                  background: i % 2 === 0 ? "#00D4AA" : "#7C6AF7",
+                  flexShrink: 0,
                 }}
-              >
-                <span style={{ fontWeight: 600, fontSize: 15 }}>
-                  {skill.name}
-                </span>
-                <span
-                  style={{
-                    fontFamily: "'DM Mono', monospace",
-                    fontSize: 13,
-                    color: i % 2 === 0 ? "#00D4AA" : "#7C6AF7",
-                    fontWeight: 500,
-                  }}
-                >
-                  {skill.level}%
-                </span>
-              </div>
-
-              {/* Animated progress bar */}
-              <AnimBar
-                level={skill.level}
-                color={i % 2 === 0 ? "#00D4AA" : "#7C6AF7"}
-                delay={i * 100}
               />
+              <span style={{ fontWeight: 600, fontSize: 15 }}>
+                {skill.name}
+              </span>
             </div>
           </FadeIn>
         ))}

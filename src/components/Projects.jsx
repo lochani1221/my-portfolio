@@ -1,5 +1,5 @@
 import FadeIn from "./FadeIn";
-import { PROJECTS } from "../data/projects";
+import { PROJECTS } from "../data/projects.jsx";
 
 export default function Projects() {
   return (

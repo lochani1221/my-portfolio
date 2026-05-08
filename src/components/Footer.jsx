@@ -29,7 +29,7 @@ export default function Footer() {
           cursor: "pointer",
         }}
       >
-        alex.dev
+        miyuranga.dev
       </span>
 
       <p
@@ -38,7 +38,7 @@ export default function Footer() {
           color: "rgba(232,232,240,0.3)",
         }}
       >
-        Designed & built by Alex Chen — {new Date().getFullYear()}
+        Designed & built by Miyuranga Ketipearachchi — {new Date().getFullYear()}
       </p>
 
       <div style={{ display: "flex", gap: 20 }}>
