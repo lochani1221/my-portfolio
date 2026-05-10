@@ -66,7 +66,7 @@ export default function Navbar() {
           userSelect: "none",
         }}
       >
-        alex.dev
+        Miyuranga.dev
       </span>
 
       {/* Desktop nav links */}

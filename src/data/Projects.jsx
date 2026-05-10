@@ -29,7 +29,7 @@ export const PROJECTS = [
     title: "FloodSense",
     tag: "FullStack",
     color: "#EC4899",
-    desc: " A research-based system designed to detect and predict flood risks using real-time environmental data and machine learning techniques. Focused on early warning and data-driven decision-making. Technologies used: Python, Machine Learning, and Data Analysis",
+    desc: " An ongoing research-based system designed to detect and predict flood risks using real-time environmental data and machine learning techniques. Focused on early warning and data-driven decision-making. Technologies used: Python, Machine Learning, and Data Analysis",
     tech: ["React", "Laravel", "Python", "Supabase"],
     github: "https://github.com/dilmiishara/FloodSense",
     github: "https://github.com/dilmiishara/Floodsense-backend",
