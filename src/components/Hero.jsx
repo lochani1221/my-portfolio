@@ -109,8 +109,9 @@ export default function Hero() {
                 marginBottom: 36,
               }}
             >
-              I build scalable, user-obsessed web products — from pixel-perfect
-              frontends to battle-hardened backend systems.
+             I craft modern, responsive web applications — from clean, intuitive
+frontends to robust, scalable backend systems. Final year undergraduate
+open to freelance, internship, and full-time opportunities.
             </p>
           </FadeIn>
 
