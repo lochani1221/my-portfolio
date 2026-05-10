@@ -140,7 +140,7 @@ export default function Hero() {
               View Projects ↓
             </button>
 
-             <a href="/CV.pdf"
+             <a href="/CV_Miyuranga.pdf"
   download="Miyuranga_CV.pdf"
   style={{
     padding: "11px 22px",
