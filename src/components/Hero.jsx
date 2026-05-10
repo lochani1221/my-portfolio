@@ -110,8 +110,8 @@ export default function Hero() {
               }}
             >
              I craft modern, responsive web applications — from clean, intuitive
-frontends to robust, scalable backend systems. Final year undergraduate
-open to freelance, internship, and full-time opportunities.
+              frontends to robust, scalable backend systems. Final year undergraduate
+              open to freelance, internship, and full-time opportunities.
             </p>
           </FadeIn>
 
