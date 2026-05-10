@@ -66,7 +66,7 @@ export default function Navbar() {
           userSelect: "none",
         }}
       >
-        Miyuranga.dev
+          Miyuranga.Dev
       </span>
 
       {/* Desktop nav links */}
