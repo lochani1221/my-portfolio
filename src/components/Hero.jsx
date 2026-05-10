@@ -140,6 +140,35 @@ export default function Hero() {
               View Projects ↓
             </button>
 
+             <a href="/CV.pdf"
+  download="Miyuranga_CV.pdf"
+  style={{
+    padding: "11px 22px",
+    borderRadius: 99,
+    fontWeight: 600,
+    fontSize: 14,
+    cursor: "pointer",
+    border: "1px solid rgba(255,255,255,0.12)",
+    background: "rgba(255,255,255,0.05)",
+    color: "rgba(232,232,240,0.8)",
+    fontFamily: "'DM Sans', sans-serif",
+    transition: "all 0.2s",
+    textDecoration: "none",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 8,
+  }}
+  onMouseEnter={(e) =>
+    (e.currentTarget.style.background = "rgba(255,255,255,0.09)")
+  }
+  onMouseLeave={(e) =>
+    (e.currentTarget.style.background = "rgba(255,255,255,0.05)")
+  }
+>
+  📄 Download CV
+</a>
+
+
             <button
               onClick={copyEmail}
               style={{
